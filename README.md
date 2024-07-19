@@ -9,11 +9,18 @@ This model would enable insurance companies to target those claims that are most
 
 To begin, exploratory data analysis was performed to identify relationships in the data and to ascertain correlations between features and the incidence of fraud. Three relationships in particular demonstrated a clear relationship:
 
-Solarized dark             |  Solarized Ocean
+Fault            |  Police Report Filed
 :-------------------------:|:-------------------------:
 ![Fault vs. Claims](image-1.png)  |  ![PoliceReportFiled vs. Claims](image-2.png)
 
 ![Age vs. Claims](image.png)
+
+
+| Evaluation Metric | Logistic Regression  | Random Forest  | CatBoost  | XGBoost Classifier  |  
+|---|---|---|---|---|
+| ROC AUC  | 0.79  | 0.85  | 0.97  | 0.97  |
+| PR AUC  |  0.15 | 0.28  | 0.67  | 0.69  |
+
 
 ## Data Cleansing
 
