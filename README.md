@@ -5,6 +5,11 @@ This analysis explores trends in car insurance claim fraud. A machine learning m
 
 This model would enable insurance companies to target those claims that are most likely to be fraudulent. By eliminating claims unlikely to be fraudulent, human insurance claims specialists only have to examine those claims that have a high probability of fraud, thus making the determination of fraud in insurance claims a more time- and cost-effective process.
 
+| Evaluation Metric | Logistic Regression  | Random Forest  | CatBoost  | XGBoost Classifier  |  
+|---|---|---|---|---|
+| ROC AUC  | 0.79  | 0.85  | 0.97  | 0.97  |
+| PR AUC  |  0.15 | 0.28  | 0.67  | 0.69  |
+
 ## Exploratory Data Analysis
 
 To begin, exploratory data analysis was performed to identify relationships in the data and to ascertain correlations between features and the incidence of fraud. Three relationships in particular demonstrated a clear relationship:
@@ -14,12 +19,6 @@ Fault            |  Police Report Filed
 ![Fault vs. Claims](image-1.png)  |  ![PoliceReportFiled vs. Claims](image-2.png)
 
 ![Age vs. Claims](image.png)
-
-
-| Evaluation Metric | Logistic Regression  | Random Forest  | CatBoost  | XGBoost Classifier  |  
-|---|---|---|---|---|
-| ROC AUC  | 0.79  | 0.85  | 0.97  | 0.97  |
-| PR AUC  |  0.15 | 0.28  | 0.67  | 0.69  |
 
 
 ## Data Cleansing
