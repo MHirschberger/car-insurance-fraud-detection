@@ -10,6 +10,8 @@ This model would enable insurance companies to target those claims that are most
 | ROC AUC  | 0.79  | 0.85  | 0.97  | 0.97  |
 | PR AUC  |  0.15 | 0.28  | 0.67  | 0.69  |
 
+The results show poorer model performance for Logistic Regression and Random Forest and better model performance for CatBoost and XGBoost Classifier.
+
 ## Exploratory Data Analysis
 
 To begin, exploratory data analysis was performed to identify relationships in the data and to ascertain correlations between features and the incidence of fraud. Three relationships in particular demonstrated a clear relationship:
@@ -31,9 +33,9 @@ Next, data cleansing was performed to prepare the data for modeling. In order to
 
 The first type of model performed was Logistic Regression. The best performing ROC and PR curves for this model were as follows:
 
-![Logistic Regression ROC Curve](image-12.png)
-
-![Logistic Regression PR Curve](image-13.png)
+Logistic Regression ROC Curve            |  Logistic Regression PR Curve
+:-------------------------:|:-------------------------:
+![Logistic Regression ROC Curve](image-12.png) | ![Logistic Regression PR Curve](image-13.png)
 
 The ROC AUC of 0.79 indicates decent performance of the model, but there is still room for improvement. The PR AUC of 0.151 indicates poor recall.
 
@@ -45,9 +47,9 @@ The feature importance bar chart shown above indicates that `Fault_ThirdParty` a
 
 The Random Forest model was performed next. The results were as follows:
 
-![Random Forest ROC Curve](image-14.png)
-
-![Random Forest PR Curve](image-15.png)
+Random Forest ROC Curve            |  Random Forest PR Curve
+:-------------------------:|:-------------------------:
+![Random Forest ROC Curve](image-14.png) | ![Random Forest PR Curve](image-15.png)
 
 The ROC AUC of 0.85 indicates strong performance of the model, but there is still room for improvement. The PR AUC of 0.269 shows an improvement in recall over Logistic Regression. Overall, Random Forest performed better than Logistic Regression in this analysis.
 
@@ -59,9 +61,9 @@ In contrast to Logistic Regression, `PolicyNumber` was seen to be the most impor
 
 CatBoost is a framework that can solve for categorical features. The results for the best performing model were as follows: 
 
-![CatBoost ROC Curve](image-17.png)
-
-![Catboost PR Curve](image-18.png)
+Catboost ROC Curve  |  Catboost PR Curve
+:-------------------------:|:-------------------------:
+![CatBoost ROC Curve](image-17.png) | ![Catboost PR Curve](image-18.png)
 
 These results showed significant improvement from the first two models, both in the ROC Curve and the PR Curve.
 
@@ -71,9 +73,13 @@ Like Random Forest, `PolicyNumber` was seen to be the most important feature whe
 
 ### XG Boost Classifier
 
-XGBoost showed results similar to CatBoost:
+XGBoost showed results similar to CatBoost. However, the most important features for XGBoost were `Fault_Third Party`and `Fault_Policy Holder`:
 
-![XGBClassifier ROC Curve](image-20.png)
+XGBoost ROC Curve  |  XGBoost PR Curve
+:-------------------------:|:-------------------------:
+![XGBClassifier ROC Curve](image-20.png) | ![XGBClassifier PR Curve](image-21.png)
 
-![XGBClassifier PR Curve](image-21.png)
+![XGBoost Feature Importances](image-22.png)
+
+
 
