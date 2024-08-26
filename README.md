@@ -7,9 +7,9 @@ This model would enable insurance companies to target those claims that are most
 
 | Evaluation Metric | Logistic Regression  | Random Forest  | CatBoost  | XGBoost Classifier  |  
 |---|---|---|---|---|
-| ROC AUC  | 0.79  | 0.85  | 0.97  | 0.97  |
-| PR AUC  |  0.15 | 0.28  | 0.67  | 0.69  |
-
+| ROC AUC  | 0.80  | 0.85  | 0.97  | 0.97  |
+| PR AUC  |  0.16 | 0.28  | 0.67  | 0.69  |
+    
 The results show poorer model performance for Logistic Regression and Random Forest and better model performance for CatBoost and XGBoost Classifier.
 
 ## Exploratory Data Analysis
@@ -35,11 +35,11 @@ The first type of model performed was Logistic Regression. The best performing R
 
 Logistic Regression ROC Curve            |  Logistic Regression PR Curve
 :-------------------------:|:-------------------------:
-![Logistic Regression ROC Curve](image-12.png) | ![Logistic Regression PR Curve](image-13.png)
+![Logistic Regression ROC Curve](image-23.png) | ![Logistic Regression PR Curve](image-24.png)
 
-The ROC AUC of 0.79 indicates decent performance of the model, but there is still room for improvement. The PR AUC of 0.151 indicates poor recall.
+The ROC AUC of 0.80 indicates decent performance of the model, but there is still room for improvement. The PR AUC of 0.156 indicates poor recall.
 
-![Logistic Regression Feature Importances](image-5.png)
+![Logistic Regression Feature Importances](image-25.png)
 
 The feature importance bar chart shown above indicates that `Fault_ThirdParty` and `Fault_PolicyHolder` were the two features that were the largest predictors of fraud in the model.
 
